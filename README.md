@@ -28,3 +28,19 @@ We see that only 14.5% of customers churn. This is something that we'll have to 
 ### B. Relationship between customer service calls and churn
 
 One would expect that a customer service calls is less happy with the service, and therefore more likely to churn. Our data confirmed this assumption.
+
+![download](https://github.com/bmjaron/phase_3_project/assets/115658357/f753bbe5-1ff1-42fb-8252-fc2b45625b5f)
+
+![download](https://github.com/bmjaron/phase_3_project/assets/115658357/de6589a3-2f80-4297-af23-3531cec3ae8b)
+
+## C. Relationship between daytime usage and churn
+
+Usage obviously determines the amount that a customer gets charged. We found that daytime usage was highest, and so was daytime charge. We also found that the price/minute for daytime usage was highest. Our data showed that customers that churned incurred a higher daytime charge, in general, than those that did not churn. We hypothesize that daytime charge is a driver of churn. 
+
+![download](https://github.com/bmjaron/phase_3_project/assets/115658357/eddf6230-287c-4141-86c8-4ec4784cf331)
+
+
+![download](https://github.com/bmjaron/phase_3_project/assets/115658357/592db28e-f091-4559-b1bc-1421b8ae5f74)
+
+
+
