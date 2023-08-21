@@ -33,7 +33,7 @@ One would expect that a customer service calls is less happy with the service, a
 
 ![download](https://github.com/bmjaron/phase_3_project/assets/115658357/de6589a3-2f80-4297-af23-3531cec3ae8b)
 
-## C. Relationship between daytime usage and churn
+### C. Relationship between daytime usage and churn
 
 Usage obviously determines the amount that a customer gets charged. We found that daytime usage was highest, and so was daytime charge. We also found that the price/minute for daytime usage was highest. Our data showed that customers that churned incurred a higher daytime charge, in general, than those that did not churn. We hypothesize that daytime charge is a driver of churn. 
 
@@ -41,6 +41,18 @@ Usage obviously determines the amount that a customer gets charged. We found tha
 
 
 ![download](https://github.com/bmjaron/phase_3_project/assets/115658357/592db28e-f091-4559-b1bc-1421b8ae5f74)
+
+## IV. Modeling
+
+### A. Overview (and a word about our scoring metric)
+
+The model that we used was a XGBoost classifier, and we were able to achieve a recall score of 78%. 
+
+We felt that recall, which is the ratio of predicted positives to true positives, was the most approriate method to score our model. This is because SyriaTel suffers financially from every customer that churns, and wants to identify customers that are prone to churning and attempt to retain them. Accordingly, false negatives are much more harmful than false positives. Every single false negative means that we missed an opportunity to retain a customer, whereas a false positive would mean giving discounts/benefits to a customer that wasn't going to churn. In our opinion, doling out benefits to those that don't need them poses less of a financial strain than losing customers and having to rebuild clientele. 
+
+### B. Method to determine best model
+
+In order to test our model, we broke our data into 3 sets. A training set, testing set and holdout set. For each model we tested, we used cross-validation to find the recall score of the training data, and then used the trained model to predict churn using the testing set, and again found the recall score. A discrepancy between the two would either be indicative of underfitting or overfitting. The model that had the best training/testing scores and least underfitting/overfitting was our XGBoost classifier. We then tested that model on the totally unseen holdout set, and calculated the recall score.
 
 
 
