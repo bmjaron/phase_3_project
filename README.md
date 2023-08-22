@@ -2,20 +2,20 @@
 
 **Author**: [Benjamin Jaron](mailto:bmjaron@gmail.com)
 
-## Table of Contents
-* [Overview](##I. Overview)
-* [Data](##II. Data)
-* [EDA](##III. EDA)
-* [Modeling](##IV. Modeling)
-* [Conclusions](##V. Conclusions)
+# Table of Contents
+* [Overview](#I.Overview)
+* [Data](#II.Data)
+* [EDA](#III.EDA)
+* [Modeling](#IV.Modeling)
+* [Conclusions](#V.Conclusions)
 
-## I. Overview
+# I. Overview
 
 Our client is SyriaTel, which is a telecommunications company. SyriaTel is facing the problem of customer churning, which causes a loss in profits. In order to address this, SyriaTel wants to offer customers that are likely to churn special benefits in order to maintain their business and ensure a long-term relationship. SyriaTel has presented us with customer data and asked us to build a model to predict customer churn. This model will, in turn, provide the client with a method to identify which customers to conciliate.
 
 Below we'll explore and analyze the data, then use machine learning algorithms to build a model that will predict customer churn. 
 
-## II. Data 
+# II. Data 
 
 The data used for this project contained 3,333 entries, which each represent a different customer. There are also 21 distinct features, one of them being churn (and this will be our target). The other 20 columns represent various details about the given customer, including the customer's state and service usage. They can be grouped into a few subsets: 
 * **Customer information:** this includes the features such as state, area code, phone number, etc.
@@ -23,18 +23,18 @@ The data used for this project contained 3,333 entries, which each represent a d
 * **Usage and charges:** this accounts for the bulk of the features, and includes the features for amount of calls, minutes and charges. This also includes international usage and charges.
 * **Customer service interaction:** this is the column customer service calls, and shows how many times the customer reached out to customer service.
 
-## III. EDA 
+# III. EDA 
 
 We explored the data and found a few meaningful relationships between the features and churn. 
 
-### A. Introductory note: we have imbalanced data
+## A. Introductory note: we have imbalanced data
 ![bar_plot_1](https://github.com/bmjaron/phase_3_project/assets/115658357/0565c4ef-6974-4148-8e68-c678ea6a654c)
 
 We see that only 14.5% of customers churn. This is something that we'll have to account for as we process the data for modeling.
 
 
 
-### B. Relationship between customer service calls and churn
+## B. Relationship between customer service calls and churn
 
 One would expect that a customer service calls is less happy with the service, and therefore more likely to churn. Our data confirmed this assumption.
 
@@ -42,7 +42,7 @@ One would expect that a customer service calls is less happy with the service, a
 
 ![download](https://github.com/bmjaron/phase_3_project/assets/115658357/de6589a3-2f80-4297-af23-3531cec3ae8b)
 
-### C. Relationship between daytime usage and churn
+## C. Relationship between daytime usage and churn
 
 Usage obviously determines the amount that a customer gets charged. We found that daytime usage was highest, and so was daytime charge. We also found that the price/minute for daytime usage was highest. Our data showed that customers that churned incurred a higher daytime charge, in general, than those that did not churn. We hypothesize that daytime charge is a driver of churn. 
 
@@ -51,15 +51,15 @@ Usage obviously determines the amount that a customer gets charged. We found tha
 
 ![download](https://github.com/bmjaron/phase_3_project/assets/115658357/592db28e-f091-4559-b1bc-1421b8ae5f74)
 
-## IV. Modeling
+# IV. Modeling
 
-### A. Overview (and a word about our scoring metric)
+## A. Overview (and a word about our scoring metric)
 
 The model that we used was a XGBoost classifier, and we were able to achieve a recall score of 78%. 
 
 We felt that recall, which is the ratio of predicted positives to true positives, was the most approriate method to score our model. This is because SyriaTel suffers financially from every customer that churns, and wants to identify customers that are prone to churning and attempt to retain them. Accordingly, false negatives are much more harmful than false positives. Every single false negative means that we missed an opportunity to retain a customer, whereas a false positive would mean giving discounts/benefits to a customer that wasn't going to churn. In our opinion, doling out benefits to those that don't need them poses less of a financial strain than losing customers and having to rebuild clientele. 
 
-### B. Method to determine best model
+## B. Method to determine best model
 
 In order to test our model, we broke our data into 3 sets. A training set, testing set and holdout set. For each model we tested, we used cross-validation to find the recall score of the training data, and then used the trained model to predict churn using the testing set, and again found the recall score. A discrepancy between the two would either be indicative of underfitting or overfitting. The model that had the best training/testing scores and least underfitting/overfitting was our XGBoost classifier. We then tested that model on the totally unseen holdout set, and calculated the recall score. Below is the confusion matrix for the testing and holdout sets. 
 
@@ -69,7 +69,7 @@ As mentioned above, we found that our model had a recall score of roughly 78%. T
 
 ![download](https://github.com/bmjaron/phase_3_project/assets/115658357/78c5e7c4-84df-4809-a56a-b4002b1b1092)
 
-### C. Feature importance
+## C. Feature importance
 
 Below is a plot of the feature importance. 
 
