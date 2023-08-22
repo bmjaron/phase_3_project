@@ -1,5 +1,14 @@
 # Predicting Customer Churn for SyriaTel
 
+**Author**: [Benjamin Jaron](mailto:bmjaron@gmail.com)
+
+## Table of Contents
+* [Overview](##Overview)
+* [Data](##Data)
+* [EDA](##EDA)
+* [Modeling](##Modeling)
+* [Conclusions](##Conclusions)
+
 ## I. Overview
 
 Our client is SyriaTel, which is a telecommunications company. SyriaTel is facing the problem of customer churning, which causes a loss in profits. In order to address this, SyriaTel wants to offer customers that are likely to churn special benefits in order to maintain their business and ensure a long-term relationship. SyriaTel has presented us with customer data and asked us to build a model to predict customer churn. This model will, in turn, provide the client with a method to identify which customers to conciliate.
