@@ -3,11 +3,11 @@
 **Author**: [Benjamin Jaron](mailto:bmjaron@gmail.com)
 
 ## Table of Contents
-* [Overview](##I.Overview)
-* [Data](##II.Data)
-* [EDA](##III.EDA)
-* [Modeling](##IV.Modeling)
-* [Conclusions](##V.Conclusions)
+* [Overview](##I. Overview)
+* [Data](##II. Data)
+* [EDA](##III. EDA)
+* [Modeling](##IV. Modeling)
+* [Conclusions](##V. Conclusions)
 
 ## I. Overview
 
