@@ -51,6 +51,15 @@ Usage obviously determines the amount that a customer gets charged. We found tha
 
 ![download](https://github.com/bmjaron/phase_3_project/assets/115658357/592db28e-f091-4559-b1bc-1421b8ae5f74)
 
+## D. Type of plan and churn
+
+There also is a relationship betewen the type and plan and churn. We noticed that customers with international plans churn in much higher proportion than those without an international plan. Similarly, customers with a voicemail plan churn in much higher proportion than those without a voicemail plan. 
+
+![download](https://github.com/bmjaron/phase_3_project/assets/115658357/061d5964-74ef-432e-a5c8-be72e1b3454b)
+
+![download](https://github.com/bmjaron/phase_3_project/assets/115658357/f2b396bc-0e3b-432d-8080-fd358185cfe0)
+
+
 # IV. Modeling
 
 ## A. Overview (and a word about our scoring metric)
