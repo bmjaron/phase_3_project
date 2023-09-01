@@ -72,7 +72,7 @@ We felt that recall, which is the ratio of predicted positives to true positives
 
 In order to test our model, we broke our data into 3 sets. A training set, testing set and holdout set. For each model we tested, we used cross-validation to find the recall score of the training data, and then used the trained model to predict churn using the testing set, and again found the recall score. A discrepancy between the two would either be indicative of underfitting or overfitting. The model that had the best training/testing scores and least underfitting/overfitting was our XGBoost classifier. We then tested that model on the totally unseen holdout set, and calculated the recall score. Below is the confusion matrix for the testing and holdout sets. 
 
-![download](https://github.com/bmjaron/phase_3_project/assets/115658357/059556fa-a08b-4ad6-a50c-361fb4b8946f)
+![download](https://github.com/bmjaron/phase_3_project/assets/115658357/301e6ae6-775e-4f93-a863-df1d0617d625)
 
 As mentioned above, we found that our model had a recall score of roughly 78%. This was a slight deviation from the 81% recall score on the testing set, but was similar to the roughly 78% recall score for the cross-validation of the training data. Overall, we're encouraged by the consistency. 
 
